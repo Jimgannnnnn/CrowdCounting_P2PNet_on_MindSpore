@@ -16,7 +16,7 @@ parser = argparse.ArgumentParser('P2PNet evaluation script', parents=[get_args_p
 args = parser.parse_args()
 ms_model = build_model(args)    #带参数加载mindspore版本模型
 
-#load torch_model
+#load torch_model weight
 torch_model=torch.load('./weights/SHTechA.pth',map_location='cpu')    #torch版本的模型并不需要加载，我们只需要读权重即可
 
 
