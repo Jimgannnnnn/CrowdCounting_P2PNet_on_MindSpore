@@ -9,7 +9,7 @@ from P2PNet_ms.models import build_model          #从P2PNet_ms文件夹中调�
 import argparse
 from P2PNet_ms.run_test import get_args_parser    #模型加载时的一些参数
 
-from p2p_keys_map import p2p_keys_map as key_dict
+
 
 #load ms_model
 parser = argparse.ArgumentParser('P2PNet evaluation script', parents=[get_args_parser()])#参数
@@ -21,7 +21,7 @@ torch_model=torch.load('./weights/SHTechA.pth',map_location='cpu')    #torch版�
 
 
 
-
+from p2p_keys_map import p2p_keys_map as key_dict    #导入索引映射表
 
 ms_param_list={}
 #按照映射迁移权重数值到一个字典里
