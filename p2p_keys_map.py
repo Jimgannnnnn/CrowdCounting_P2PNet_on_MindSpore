@@ -1,4 +1,4 @@
-#由两个csv文件对比得到，存在一定规律，如果量少可以手动对比
+#由两个csv文件对比得到，左为mindspore的索引，右为torch的索引，存在一定规律，如果量少可以手动对比
 p2p_keys_map={
     'backbone.body1.0.weight':'backbone.body1.0.weight',
     'backbone.body1.0.bias':'backbone.body1.0.bias',
