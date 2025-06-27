@@ -14,7 +14,7 @@ mindspore和torch的模型权重数据，如果你去对比，会发现两者其
 
 P2PNet_torch    #包含了模型原torch权重和代码，这里我就不上传了，因为转换部分只调用了模型加载的接口
 
-   |--P2PNet_ms    #文件夹，包含模型mindspore版本的代码
+   |--P2PNet_ms    #文件夹，包含模型mindspore版本的代码（我这里没有上传）
    
    |--p2p_pth_weight_out.py   #导出pytorch版本模型权重的索引（keys）
    
