@@ -24,7 +24,7 @@ torch_model=torch.load('./weights/SHTechA.pth',map_location='cpu')    #torch版�
 
 
 ms_param_list={}
-#按照映射迁移权重数值
+#按照映射迁移权重数值到一个字典里
 for k,v in ms_model.parameters_dict().items():
     torch_k = key_dict[k]
     torch_v = torch_model['model'][torch_k]
@@ -33,7 +33,7 @@ for k,v in ms_model.parameters_dict().items():
     ms_v = mindspore.Parameter(torch_v,name=k)
     ms_param_list[k]=ms_v
 
-#将迁移好的“索引-数据”字典导入mindspore模型
+#将迁移好的“索引-数据”字典（类型我记得需要是Ordered Dict？不太记得了）导入mindspore模型
 load_param_into_net(ms_model,ms_param_list)
 
 #保存为ckpt文件
