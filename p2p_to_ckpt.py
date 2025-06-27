@@ -20,10 +20,6 @@ ms_model = build_model(args)    #带参数加载mindspore版本模型
 torch_model=torch.load('./weights/SHTechA.pth',map_location='cpu')    #torch版本的模型并不需要加载，我们只需要读权重即可
 
 
-# 把双方的key值读进来
-torch_keys = pd.read_csv('p2p_pth_0725.csv')
-mindspore_keys = pd.read_csv('p2p_ckpt_0725.csv')
-
 
 
 
