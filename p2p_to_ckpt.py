@@ -7,7 +7,7 @@ from mindspore import load_checkpoint,load_param_into_net,save_checkpoint
 
 from P2PNet_ms.models import build_model          #从P2PNet_ms文件夹中调用模型加载的接口，这里我没有上传
 import argparse
-from P2PNet_ms.run_test import get_args_parser    #用于导入模型加载时的一些参数
+from P2PNet_ms.run_test import get_args_parser    #模型加载时的一些参数
 
 from p2p_keys_map import p2p_keys_map as key_dict
 
